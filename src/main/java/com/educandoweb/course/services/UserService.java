@@ -19,7 +19,7 @@ public class UserService {
     }
 
     public User findById(Long id){
-        Optional<User> obj = repository.findById(id);
+        Optional<User> obj = repository.findById(id); // O método findById() ele vai no banco de dados e entrega os dados daquele objeto
         return obj.get();
     }
 
@@ -27,7 +27,17 @@ public class UserService {
         return repository.save(user);
     }
 
-    public void delete(Long id){
-        repository.deleteById(id);
+    public void delete(Long id){ repository.deleteById(id); }
+
+    public User update(Long id, User obj) {
+        User entity = repository.getOne(id); // O método getOne() ele não vai no banco ainda, ele simplesmente só vai deixar o objeto monitorado
+        updateData(entity, obj);
+        return repository.save(entity);
+    }
+
+    private void updateData(User entity, User obj) {
+        entity.setName(obj.getName());
+        entity.setEmail(obj.getEmail());
+        entity.setPhone(obj.getPhone());
     }
 }
