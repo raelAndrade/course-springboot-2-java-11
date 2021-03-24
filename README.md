@@ -28,3 +28,11 @@
 * Estrutura de camadas lógicas: Resource, Service e Repository
 * CRUD - Criar, Recuperar, Atualizar e Deletar
 * Tratamento de Exceções
+* Dev profile
+
+#### Deploy da API no Heroku
+
+* Criação de app no dashboard da heroku
+* Configuração de variáveis de ambiente
+* Criação da base de dados Postgres
+* Implantação da API REST
