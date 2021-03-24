@@ -63,10 +63,10 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
-	      "name": "Maria Brown",
-	      "email": "maria@gmail.com",
-	      "phone": "977557799",
-	      "password": "123456"
+	"name": "Maria Brown",
+	"email": "maria@gmail.com",
+	"phone": "977557799",
+	"password": "123456"
   }'
 ```
 
