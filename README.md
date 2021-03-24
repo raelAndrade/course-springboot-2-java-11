@@ -36,3 +36,59 @@
 * Configuração de variáveis de ambiente
 * Criação da base de dados Postgres
 * Implantação da API REST
+
+#### Users - Endpoints
+
+```js
+@GET todos
+
+curl -X GET \
+  https://api-rest-product-order.herokuapp.com/users \
+  -H 'cache-control: no-cache' \
+```
+
+```js
+@GET por id
+
+curl -X GET \
+  https://api-rest-product-order.herokuapp.com/users/1 \
+  -H 'cache-control: no-cache' \
+```
+
+```js
+@POST
+
+curl -X POST \
+  https://api-rest-product-order.herokuapp.com/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	      "name": "Maria Brown",
+	      "email": "maria@gmail.com",
+	      "phone": "977557799",
+	      "password": "123456"
+  }'
+```
+
+```js
+@PUT
+
+curl -X PUT \
+  https://api-rest-product-order.herokuapp.com/users/1 \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+        "name": "Maria José",
+	      "email": "maria.jose@gmail.com",
+	      "phone": "999990000",
+	      "password": "123456"
+  }'
+```
+
+```js
+@DELETE
+
+curl -X DELETE \
+  https://api-rest-product-order.herokuapp.com/users/1 \
+  -H 'cache-control: no-cache' \
+```
