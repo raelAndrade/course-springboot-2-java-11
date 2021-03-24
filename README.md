@@ -79,9 +79,9 @@ curl -X PUT \
   -H 'content-type: application/json' \
   -d '{
         "name": "Maria José",
-	      "email": "maria.jose@gmail.com",
-	      "phone": "999990000",
-	      "password": "123456"
+	"email": "maria.jose@gmail.com",
+	"phone": "999990000",
+	"password": "123456"
   }'
 ```
 
